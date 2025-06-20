@@ -1,17 +1,113 @@
 body {
-  font-family: sans-serif;
-  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 20px;
+  background: #f8f8f8;
+  transition: background 0.3s;
 }
-input {
-  padding: 8px;
-  width: 200px;
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+h1 {
+  text-align: center;
+}
+
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input[type="text"], input[type="date"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
 button {
-  margin-left: 5px;
-  padding: 8px;
+  padding: 10px 16px;
+  border: none;
+  background-color: #0e8cf3;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }
-li {
-  list-style: none;
-  margin: 10px 0;
+
+.task-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-bubble {
+  display: flex;
+  background-color: #e6f0ff;
+  padding: 12px 16px;
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.theme-toggle {
+  margin-bottom: 15px;
+}
+
+/* Themes */
+.dark {
+  background: #121212;
+  color: white;
+}
+.dark .container {
+  background: #1e1e1e;
+}
+.dark .task-bubble {
+  background: #333;
+  color: white;
+}
+
+.blue {
+  background: #e0f7fa;
+}
+.blue .container {
+  background: #ffffff;
+}
+.blue .task-bubble {
+  background: #b2ebf2;
+}
+
+.task-bubble .completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background-color: #0750ee;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.task-bubble span {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.task-bubble input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task-date {
+  font-size: 12px;
+  margin-left: 8px;
+  color: gray;
 }
